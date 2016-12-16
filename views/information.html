@@ -1,0 +1,185 @@
+<!--
+<div>
+    <input ng-model=collapse type=checkbox>Title
+    <div ng-show=collapse>
+        Only shown when checkbox is clicked
+    </div>
+</div>
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Information</title>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1>Cystic Fibrosis</h1>
+            <p>Learn more about Cystic Fibrosis</p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div ng-controller="InformationController">
+
+
+
+
+            <div ng-init="showDefs=flase" class="panel panel-default">
+
+                <div class="panel-heading">
+                    <a href="" ng-show="!showDefs" ng-click="showDefs=!showDefs">+</a>
+                    <a href="" ng-show="showDefs" ng-click="showDefs=!showDefs">-</a>
+                    <a href="" ng-click="showDefs=!showDefs">What is Cystic Fibrosis</a>
+                </div>
+
+                <div ng-show="showDefs" class="panel-body">
+                    <div ng-repeat="def in defs">
+                        <label class="control-label panel-heading">{{def}}</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div ng-init="showSyms=false" class="panel panel-default">
+
+                <div class="panel-heading">
+                    <a href="" ng-show="!showSyms" ng-click="showSyms=!showSyms">+</a>
+                    <a href="" ng-show="showSyms" ng-click="showSyms=!showSyms">-</a>
+                    <a href="" ng-click="showSyms=!showSyms">Symptoms</a>
+                </div>
+
+                <div ng-show="showSyms" class="panel-body">
+                    <div ng-repeat="sym in syms">
+                        <label class="control-label panel-heading">{{sym}}</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div ng-init="showCause=false" class="panel panel-default">
+
+                <div class="panel-heading">
+                    <a href="" ng-show="!showCause" ng-click="showCause=!showCause">+</a>
+                    <a href="" ng-show="showCause" ng-click="showCause=!showCause">-</a>
+                    <a href="" ng-click="showCause=!showCause">Cause of Cystic Fibrosis</a>
+                </div>
+
+                <div ng-show="showCause" class="panel-body">
+                    <div ng-repeat="cause in causes">
+                        <label class="control-label panel-heading">{{cause}}</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div ng-init="showTreat=false" class="panel panel-default">
+
+                <div class="panel-heading">
+                    <a href="" ng-show="!showTreat" ng-click="showTreat=!showTreat">+</a>
+                    <a href="" ng-show="showTreat" ng-click="showTreat=!showTreat">-</a>
+                    <a href="" ng-click="showTreat=!showTreat">Treatment Options</a>
+                </div>
+
+                <div ng-show="showTreat" class="panel-body">
+                    <div ng-repeat="treat in treats">
+                        <label class="control-label">{{treat}}</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div ng-init="showDiag=false" class="panel panel-default">
+
+                <div class="panel-heading">
+                    <a href="" ng-show="!showDiag" ng-click="showDiag=!showDiag">+</a>
+                    <a href="" ng-show="showDiag" ng-click="showDiag=!showDiag">-</a>
+                    <a href="" ng-click="showDiag=!showDiag">Diagnosis Options for Cystic Fibrosis</a>
+                </div>
+
+                <div ng-show="showDiag" class="panel-body">
+                    <div ng-repeat="diag in diags">
+                        <label class="control-label">{{diag}}</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <div ng-init="showNutris=false" class="panel panel-default">
+
+                <div class="panel-heading">
+                    <a href="" ng-show="!showNutris" ng-click="showNutris=!showNutris">+</a>
+                    <a href="" ng-show="showNutris" ng-click="showNutris=!showNutris">-</a>
+                    <a href="" ng-click="showNutris=!showNutris">Nutirtions For Cystic Fibrosis Patients</a>
+                </div>
+
+                <div ng-show="showNutris" class="panel-body">
+                    <div ng-repeat="nutri in nutris">
+                        <label class="control-label">{{nutri}}</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div ng-init="showExp=false" class="panel panel-default">
+
+                <div class="panel-heading">
+                    <a href="" ng-show="!showExp" ng-click="showExp=!showExp">+</a>
+                    <a href="" ng-show="showExp" ng-click="showExp=!showExp">-</a>
+                    <a href="" ng-click="showExp=!showExp">What you can expect</a>
+                </div>
+
+                <div ng-show="showExp" class="panel-body">
+                    <div ng-repeat="exp in expects">
+                        <label class="control-label">{{exp}}</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+</body>
+
+</html>

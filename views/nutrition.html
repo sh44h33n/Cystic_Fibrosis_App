@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html ng-app="CysticFibrosis">
+
+<head>
+    <title>Nutrition Control</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        .carousel-inner>.item>img,
+        .carousel-inner>.item>a>img {
+            width: 15%;
+            margin: auto;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form>
+            <h1>Nutrition Control</h1>
+            <h3>Cystic Fibrosis</h3>
+            <h4></h4>
+
+
+
+
+
+            <div ng-init="showDefs=flase" class="panel panel-default">
+
+                <div class="panel-heading">
+                    <a href="" ng-show="!showDefs" ng-click="showDefs=!showDefs">+</a>
+                    <a href="" ng-show="showDefs" ng-click="showDefs=!showDefs">-</a>
+                    <a href="" ng-click="showDefs=!showDefs">How to check heart rate</a>
+                </div>
+
+                <div ng-show="showDefs" class="panel-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="thumbnail">
+                                <img src="./src/images/count/pulse.jpg" alt="Lights" style="width:100%">
+                                <div class="caption">
+                                    <p>Touch the pulse point as above</p>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="thumbnail">
+                                <img src="./src/images/count/count.jpg" alt="Nature" style="width:100%">
+                                <div class="caption">
+                                    <p>Count the pulse for one minute</p>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="thumbnail">
+                                <img src="./src/images/count/bbreath.jpg" alt="Lights" style="width:100%">
+                                <div class="caption">
+                                    <p>You can count baby pulse as above</p>
+                                </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="form-group">
+
+                <label for="text">Enter your weight:</label>
+                <input type="text" ng-model="weight" placeholder="Weight in (lbs)" class="form-control" id="text">
+            </div>
+            <div class="form-group">
+                <label for="text">Enter your height:</label>
+                <input type="text" ng-model="height" placeholder="Height in (inches)" class="form-control" id="pwd">
+            </div>
+
+
+        </form>
+
+
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <h3>Nutrition Analysis Report</h3>
+                </h3>
+            </div>
+            <div class="panel-body">
+
+                <h3><span class="" ng-show="weight && height">Based on your weight, {{ weight }} pounds, and height {{ height }} inches, your BODY MASS INDEX (BMI) is: <span class="result">{{ calcBMI() | number:2 }}</span>, which is considered as
+                    <span class="advice"> {{ BMIhealth() }} </span></h3>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</body>
+
+
+
+
+</html>
