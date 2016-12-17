@@ -1,5 +1,16 @@
 var app = angular.module('CysticFibrosis', ['ngRoute', 'ui.bootstrap']);
 
+app.factory('DataSource', ['$http', function($http) {
+    return {
+        get: function(fileName, callback) {
+            $http.get(fileName).
+            success(function(data, status) {
+                callback(data);
+            });
+        }
+    };
+}]);
+
 app.config(function($routeProvider) {
     $routeProvider
         .when('/', {
@@ -105,34 +116,32 @@ app.controller('Slidee', function($scope) {
 
 
 });
-app.controller('heartSlide', function($scope) {
-
-
-    // Retrieving images from directory in to slide array;
-
-
+app.controller('ImageSlider', function($scope, DataSource) {
     $scope.myInterval = 2000;
 
-    $scope.slides = [{ // Image array for slide show
-            image: './src/images/count/pulse.jpg'
-        },
-        {
-            image: './src/images/cout/count.jpg'
-        }
-    ];
-    $scope.caps = [{
-            string: 'Touch the pulse point as shown'
-        },
-        {
-            string: 'Count pulse for 1 minute'
-        }
+    var IMAGE_WIDTH = 100;
+    $scope.IMAGE_LOCATION = "./src/images/slides/";
+
+    // Retrieving and creating image array using json files
+    DataSource.get("./src/JsonImageFiles/slide.json", function(data) {
+        $scope.slides = data;
+
+    });
+
+
+
+});
+
+app.controller('inforControl', function($scope, DataSource) {
 
 
 
 
-    ]
+    // Retrieving and creating image array using json files
+    DataSource.get("./src/JsonImageFiles/CF.json", function(data) {
+        $scope.slides = data;
 
-
+    });
 
 
 

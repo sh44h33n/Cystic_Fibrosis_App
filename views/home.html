@@ -28,18 +28,21 @@
 
 
 
-        <div ng-controller="Slidee">
+        <div ng-controller="ImageSlider">
             <div class="row">
                 <div class="col-md-9">
 
                     <div id="slides_control">
-                        <div>
+                        <div class="thumbnail">
                             <carousel interval="myInterval">
                                 <slide ng-repeat="slide in slides" active="slide.active">
 
-                                    <img ng-src="{{slide.image}}" alt="Nature" style="width:88%">
+                                    <img ng-src="{{IMAGE_LOCATION+slide.image}}" alt="Nature" style="max-height:505px; margin:0 auto; width:100%;">
                                     <div class="carousel-caption">
                                         <h4>Slide {{$index+1}}</h4>
+                                        <p>
+                                            <h3>{{slide.desc}}</h3>
+                                        </p>
                                     </div>
                         </div>
                         </slide>
@@ -50,9 +53,9 @@
                 <div class="col-md-3">
                     <div class="thumbnail">
 
-                        <img src="./src/images/tools/bp2.jpg" style="width:100%">
-                        <div class="caption">
-                            <p><a href="#blood">Use a blood pressure monitor, Self Diagnosis analyzes the result</a></p>
+                        <img src="./src/images/tools/bp2.jpg" style="max-height:250px; margin:0 auto;width:100% ">
+                        <div class="caption ">
+                            <p><a href="#blood ">Use a blood pressure monitor, Self Diagnosis analyzes the result</a></p>
                         </div>
                         </a>
                     </div>
@@ -60,11 +63,11 @@
 
 
 
-                <div class="col-md-3">
-                    <div class="thumbnail">
-                        <img src="./src/images/tools/f.jpg" style="width:100%">
-                        <div class="caption">
-                            <p><a href="#nutrition">With self diagnosis, control your weight</a></p>
+                <div class="col-md-3 ">
+                    <div class="thumbnail ">
+                        <img src="./src/images/tools/f.jpg " style="width:100% ">
+                        <div class="caption ">
+                            <p><a href="#nutrition ">With self diagnosis, control your weight</a></p>
                         </div>
                         </a>
                     </div>
@@ -80,70 +83,59 @@
 
 
 
+                <div class="container">
 
+                    <div class="row ">
+                        <div class="col-md-3 ">
+                            <div class="thumbnail ">
 
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="thumbnail">
+                                <img src="./src/images/tools/cf.jpg " style="max-height:175px; margin:0 auto; width:100% ">
+                                <div class="caption ">
+                                    <p><a href="#information ">Learn all about Cystic Fibrosis </a></p>
+                                </div>
 
-                            <img src="./src/images/tools/cf.jpg" style="width:100%">
-                            <div class="caption">
-                                <p><a href="#information">Learn all everything about Cystic Fibrosis </a></p>
                             </div>
-
                         </div>
-                    </div>
 
 
 
-                    <div class="col-md-3">
-                        <div class="thumbnail">
-                            <img src="./src/images/tools/doc.jpg" style="width:100%">
-                            <div class="caption">
-                                <p><a href="#information">Together, we can make a difference </a></p>
+                        <div class="col-md-3 ">
+                            <div class="thumbnail ">
+                                <img src="./src/images/tools/doc.jpg " style="max-height:175px; margin:0 auto; width:100% ">
+                                <div class="caption ">
+                                    <p><a href="#information ">Together, we can make a difference </a></p>
+                                </div>
+
                             </div>
-
                         </div>
-                    </div>
 
 
-                    <div class="col-md-3">
-                        <div class="thumbnail">
+                        <div class="col-md-3 ">
+                            <div class="thumbnail ">
 
-                            <img src="./src/images/tools/bb.jpg" style="width:100%">
-                            <div class="caption">
-                                <p><a href="#information">Help Cystic Fibrosis babies </a></p>
+                                <img src="./src/images/tools/bb.jpg " style="max-height:175px; margin:0 auto; width:100% ">
+                                <div class="caption ">
+                                    <p><a href="#information ">Help Cystic Fibrosis babies </a></p>
+                                </div>
+
                             </div>
-                            </a>
                         </div>
-                    </div>
 
 
 
-                    <div class="col-md-3">
-                        <div class="thumbnail">
+                        <div class="col-md-3">
+                            <div class="thumbnail">
 
-                            <img src="./src/images/tools/h.jpeg" style="width:100%">
-                            <div class="caption">
-                                <p><a href="#heart">Analyze heart and respiration rate </a></p>
+                                <img src="./src/images/tools/h.jpeg " style="max-height:175px; margin:0 auto; width:100% ">
+                                <div class="caption ">
+                                    <p><a href="#heart ">Analyze heart and respiration rate </a></p>
+                                </div>
+
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
