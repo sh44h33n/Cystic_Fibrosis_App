@@ -1,147 +1,92 @@
-<!DOCTYPE html>
-<html>
+<div class="container" <form>
+    <h1>Pulse & Respiration Analysis</h1>
+    <h3>Cystic Fibrosis</h3>
 
-<head>
-    <title>Home</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style>
-        .carousel-inner>.item>img,
-        .carousel-inner>.item>a>img {
-            width: 100%;
-            margin: auto;
-        }
-    </style>
-</head>
 
-<body>
 
-    <div class="container">
 
-        <div class="well">
-            <h3>Sef Diagnosis</h3>
-            <p>The Convenience of Self Diagnosis is in reach</p>
+    <div ng-init="showDefs=flase" class="panel panel-default">
+
+        <div class="panel-heading">
+            <a href="" ng-show="!showDefs" ng-click="showDefs=!showDefs">+</a>
+            <a href="" ng-show="showDefs" ng-click="showDefs=!showDefs">-</a>
+            <a href="" ng-click="showDefs=!showDefs">How to check heart rate</a>
         </div>
 
-
-
-
-
-
-        <div class="row">
-            <div class="col-md-9">
-
-                <div id="ImageSlider">
+        <div ng-show="showDefs" class="panel-body">
+            <div class="row">
+                <div class="col-md-2">
                     <div class="thumbnail">
-                        <carousel interval="myInterval">
-                            <slide ng-repeat="slide in slides" active="slide.active">
-
-                                <img ng-src="{{IMAGE_LOCATION+slide.image}}" alt="Nature" style="max-height:505px; margin:0 auto; width:100%;">
-                                <div class="carousel-caption">
-                                    <h4>Slide {{$index+1}}</h4>
-                                    <p>
-                                        <h3>{{slide.desc}}</h3>
-                                    </p>
-                                </div>
+                        <img src="./src/images/count/breath.jpg" alt="Lights" style="width:100%">
+                        <div class="caption">
+                            <p>Sit still and count breath</p>
+                        </div>
+                        </a>
                     </div>
-                    </slide>
-                    </carousel>
                 </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="thumbnail">
-
-                    <img src="./src/images/tools/bp2.jpg" style="max-height:250px; margin:0 auto;width:100% ">
-                    <div class="caption ">
-                        <p><a href="#blood ">Use a blood pressure monitor, Self Diagnosis analyzes the result</a></p>
+                <div class="col-md-2">
+                    <div class="thumbnail">
+                        <img src="./src/images/count/count.jpg" alt="Lights" style="width:100%">
+                        <div class="caption">
+                            <p>Count no. breathes in one minute</p>
+                        </div>
+                        </a>
                     </div>
-                    </a>
                 </div>
-            </div>
-
-
-
-            <div class="col-md-3 ">
-                <div class="thumbnail ">
-                    <img src="./src/images/tools/f.jpg " style="width:100% ">
-                    <div class="caption ">
-                        <p><a href="#nutrition ">With self diagnosis, control your weight</a></p>
+                <div class="col-md-2">
+                    <div class="thumbnail">
+                        <img src="./src/images/count/bbreath.jpg" alt="Nature" style="width:100%">
+                        <div class="caption">
+                            <p>You can count baby breath as well</p>
+                        </div>
+                        </a>
                     </div>
-                  
                 </div>
+
             </div>
 
 
-
-
-
-
-
-            <!--Static images with cf functions-->
-
-
-
-            <div class="container">
-
-                <div class="row ">
-                    <div class="col-md-3 ">
-                        <div class="thumbnail ">
-
-                            <img src="./src/images/tools/cf.jpg " style="max-height:175px; margin:0 auto; width:100% ">
-                            <div class="caption ">
-                                <p><a href="#information ">Learn all about Cystic Fibrosis </a></p>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-md-3 ">
-                        <div class="thumbnail ">
-                            <img src="./src/images/tools/doc.jpg " style="max-height:175px; margin:0 auto; width:100% ">
-                            <div class="caption ">
-                                <p><a href="#information ">Together, we can make a difference </a></p>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    <div class="col-md-3 ">
-                        <div class="thumbnail ">
-
-                            <img src="./src/images/tools/bb.jpg " style="max-height:175px; margin:0 auto; width:100% ">
-                            <div class="caption ">
-                                <p><a href="#information ">Help Cystic Fibrosis babies </a></p>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-md-3">
-                        <div class="thumbnail">
-
-                            <img src="./src/images/tools/h.jpeg " style="max-height:175px; margin:0 auto; width:100% ">
-                            <div class="caption ">
-                                <p><a href="#heart ">Analyze heart and respiration rate </a></p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-
-
-
-
     </div>
 
-</body>
 
-</html>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="form-group">
+
+        <label for="text">Pulse Rate:</label>
+        <input type="text" ng-model="weight" placeholder="Pulse Rate in (Pulse / Minute)" class="form-control" id="text">
+    </div>
+    <div class="form-group">
+        <label for="text">Respiration Rate:</label>
+        <input type="text" ng-model="height" placeholder="Respiration Rate in (Breathes / Minute)" class="form-control" id="pwd">
+    </div>
+
+
+    </form>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <h3>Nutrition Analysis Report</h3>
+            </h3>
+        </div>
+        <div class="panel-body">
+
+            <h3><span class="" ng-show="weight && height"><span class="result"></span>
+                <span class="advice">Blood Analysis Report Here</span></h3>
+
+        </div>
+    </div>
+
+</div>

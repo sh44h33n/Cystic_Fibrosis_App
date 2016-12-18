@@ -52,12 +52,19 @@ app.config(function($routeProvider) {
 
         })
         .when('/heart', {
-            templateUrl: './views/heart.html'
+            templateUrl: './views/heart.html',
+            controller: 'heartController'
 
         })
         .when('/blood', {
             templateUrl: './views/blood.html',
             controller: 'bloodController'
+
+
+        })
+        .when('/respiration', {
+            templateUrl: './views/respiration.html',
+            controller: ''
 
 
         })
