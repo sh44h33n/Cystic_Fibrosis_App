@@ -1,31 +1,28 @@
-angular.module('CysticApp').controller('homeController', ['$scope', function($scope) {
-
-    $scope.myInterval = 1500;
-
-    $scope.slides = [{ // Image array for slide show
-            image: './src/images/slides/1.jpg'
-        },
-        {
-            image: './src/images/slides/2.jpg'
-        },
-        {
-            image: './src/images/slides/3.jpg'
-        },
-        {
-            image: './src/images/slides/4.jpg'
+/*
+angular.module('CysticFibrosis').factory('DataSource', ['$http', function($http) {
+    return {
+        get: function(fileName, callback) {
+            $http.get(fileName).
+            success(function(data, status) {
+                callback(data);
+            });
         }
-    ];
+    };
+}]);
+*/
 
+angular.module('CysticFibrosis').controller('homeController', ['$scope', function($scope, DataSource) {
 
+    $scope.myInterval = 2000;
 
+    var IMAGE_WIDTH = 100;
+    $scope.IMAGE_LOCATION = "./src/images/slides/";
 
+    // Retrieving and creating image array using json files
+    DataSource.get("./src/JsonImageFiles/slide.json", function(data) {
+        $scope.slides = data;
 
-
-
-
-
-
-
+    });
 
 
 

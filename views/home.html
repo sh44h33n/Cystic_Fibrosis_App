@@ -16,28 +16,24 @@
 </head>
 
 <body>
-
     <div class="container">
-
         <div class="well">
             <h3>Sef Diagnosis</h3>
             <p>The Convenience of Self Diagnosis is in reach</p>
         </div>
 
 
+        <div class="row">
 
 
-
-        <div ng-controller="ImageSlider">
-            <div class="row">
+            <div ng-controller="ImageSlider">
                 <div class="col-md-9">
-
+                  <a href="#" class="">
                     <div id="slides_control">
                         <div class="thumbnail">
                             <carousel interval="myInterval">
                                 <slide ng-repeat="slide in slides" active="slide.active">
-
-                                    <img ng-src="{{IMAGE_LOCATION+slide.image}}" alt="Nature" style="max-height:505px; margin:0 auto; width:100%;">
+                                    <img class="img-responsive" ng-src="{{IMAGE_LOCATION+slide.image}}" style="max-height:550px" >
                                     <div class="carousel-caption">
                                         <h4>Slide {{$index+1}}</h4>
                                         <p>
@@ -48,99 +44,97 @@
                         </slide>
                         </carousel>
                     </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="thumbnail">
-
-                        <img src="./src/images/tools/bp2.jpg" style="max-height:250px; margin:0 auto;width:100% ">
-                        <div class="caption ">
-                            <p><a href="#blood ">Use a blood pressure monitor, Self Diagnosis analyzes the result</a></p>
-                        </div>
-                        </a>
-                    </div>
-                </div>
-
-
-
-                <div class="col-md-3 ">
-                    <div class="thumbnail ">
-                        <img src="./src/images/tools/f.jpg " style="width:100% ">
-                        <div class="caption ">
-                            <p><a href="#nutrition ">With self diagnosis, control your weight</a></p>
-                        </div>
-                        </a>
-                    </div>
-                </div>
-
-
-
-
-
-
-
-                <!--Static images with cf functions-->
-
-
-
-                <div class="container">
-
-                    <div class="row ">
-                        <div class="col-md-3 ">
-                            <div class="thumbnail ">
-
-                                <img src="./src/images/tools/cf.jpg " style="max-height:175px; margin:0 auto; width:100% ">
-                                <div class="caption ">
-                                    <p><a href="#information ">Learn all about Cystic Fibrosis </a></p>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-
-                        <div class="col-md-3 ">
-                            <div class="thumbnail ">
-                                <img src="./src/images/tools/doc.jpg " style="max-height:175px; margin:0 auto; width:100% ">
-                                <div class="caption ">
-                                    <p><a href="#information ">Together, we can make a difference </a></p>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-3 ">
-                            <div class="thumbnail ">
-
-                                <img src="./src/images/tools/bb.jpg " style="max-height:175px; margin:0 auto; width:100% ">
-                                <div class="caption ">
-                                    <p><a href="#information ">Help Cystic Fibrosis babies </a></p>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-
-                        <div class="col-md-3">
-                            <div class="thumbnail">
-
-                                <img src="./src/images/tools/h.jpeg " style="max-height:175px; margin:0 auto; width:100% ">
-                                <div class="caption ">
-                                    <p><a href="#heart ">Analyze heart and respiration rate </a></p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+                  </a>
                 </div>
             </div>
 
+            <div class="col-md-3">
+              <a href="#" class="">
+                <div class="thumbnail">
 
+                    <img class="img-responsive" src="./src/images/tools/bp2.jpg">
+                    <div class="caption ">
+                        <p><a href="#blood ">Use a blood pressure monitor, Self Diagnosis analyzes the result</a></p>
+                    </div>
+                    </a>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3 ">
+              <a href="#" class="">
+                <div class="thumbnail ">
+                    <img class="img-responsive" src="./src/images/tools/f.jpg ">
+                    <div class="caption ">
+                        <p><a href="#nutrition ">With self diagnosis, control your weight</a></p>
+                    </div>
+
+                </div>
+              </a>
+            </div>
 
 
         </div>
+        <!-- end of the first row-->
+
+
+          <div class="row ">
+              <div class="col-md-3 ">
+                <a href="#" class="">
+                  <div class="thumbnail ">
+
+                      <img class="img-responsive" src="./src/images/tools/cf.jpg ">
+                      <div class="caption ">
+                          <p><a href="#information ">Learn all about Cystic Fibrosis </a></p>
+                      </div>
+
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-3 ">
+                <a href="#" class="">
+                  <div class="thumbnail ">
+                      <img class="img-responsive" src="./src/images/tools/doc.jpg ">
+                      <div class="caption ">
+                          <p><a href="#information ">Together, we can make a difference </a></p>
+                      </div>
+
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-3 ">
+                <a href="#" class="">
+                  <div class="thumbnail ">
+
+                      <img class="img-responsive" src="./src/images/tools/bb.jpg ">
+                      <div class="caption ">
+                          <p><a href="#information ">Help Cystic Fibrosis babies </a></p>
+                      </div>
+
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-3">
+                <a href="#" class="">
+                  <div class="thumbnail">
+
+                      <img class="img-responsive" src="./src/images/tools/h.jpeg ">
+                      <div class="caption ">
+                          <p><a href="#heart ">Analyze heart and respiration rate </a></p>
+                      </div>
+
+                  </div>
+                </a>
+              </div>
+
+        </div>
+
+      </div><!-- end of the second row-->
+
+
+</div><!-- end of the main container-->
+
+
+
 
 </body>
 

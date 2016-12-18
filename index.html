@@ -14,7 +14,7 @@
     </script>
     <script type="text/javascript" src="./components/angular.min.js"></script>
     <script data-require="ui-bootstrap@0.5.0" data-semver="0.5.0" src="./components/ui-bootstrap-tpls.js"></script>
-    <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-animate.js"></script>
+
     <script type="text/javascript" src="./components/angular-route.min.js"></script>
 
     <script src="./src/app/app.js"></script>
@@ -86,9 +86,9 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">More<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Register</a></li>
+                        <li><a href="#register">Register</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Sign in</a></li>
+                        <li><a href="#login">Sign in</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#about">About me</a></li>
                         <li role="separator" class="divider"></li>
@@ -100,10 +100,12 @@
     </nav>
 
 
-    <div ng-view>. Loading . . . </div>
+    <div ng-view>Loading . . . </div>
 
     <script type="text/javascript" src="./src/controllers/bmiController.js"></script>
-    <script type="text/javascript" src="./src/controllers/informationController.js"></script>
+    <script type="text/javascript" src="./src/controllers/bloodController.js"></script>
+
+    <script type="text/javascript" src="./src/controllers/informationContrroller.js"></script>
 </body>
 
 </html>

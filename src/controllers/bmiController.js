@@ -1,4 +1,6 @@
-angular.module('CysticFibrosis').controller('bmiController', ['$scope', function($scope) {
+var app = angular.module('CysticFibrosis');
+
+app.controller('bmiController', ['$scope', function($scope) {
     var ctrl = this;
 
 
@@ -9,7 +11,7 @@ angular.module('CysticFibrosis').controller('bmiController', ['$scope', function
         var BMI = $scope.BMI;
         return (BMI);
     };
-
+    
     $scope.BMIhealth = function() {
         $scope.BMI = ($scope.weight * 703) / $scope.height / $scope.height;
         var BMI = $scope.BMI;
