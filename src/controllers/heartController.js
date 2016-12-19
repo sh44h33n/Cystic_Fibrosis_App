@@ -18,25 +18,21 @@ app.controller('heartController', ['$scope', function($scope) {
 
 
 
-        if ((heart < 69 || heart > 200)) {
-            return ("The blood pressure is invalid, please consult your doctor");
+        if ((heart < 100 || heart > 220)) {
+            return ("The respiration rate and heart rate is not in valid range, please follow the instructions and try again or consult the doctor");
 
-        } else if ((breath < 39 || breath > 170)) {
-            return ("The blood pressure is invalid, please consult your doctor");
+        } else if ((breath < 20 || breath > 55)) {
+            return ("The respiration rate and heart rate is not in valid range, please follow the instructions and try again or consult the doctor");
 
-        } else if ((69 < heart < 120) && (39 < breath < 80)) {
-            return ("having normal blood pressure, continue your current diet and any doctor prescribed madication.");
+        } else if ((99 < heart && heart < 140) && (19 < breath && breath < 35)) {
+            return ("Normal heart rate or respiration rate for average cystic fibrosis patient, continue your current nutrotion plan / diet and any doctor prescribed madication/enzymes.");
 
-        } else if ((120 < heart < 139) && (80 < breath < 89)) {
-            return ("having pre-hypertension, you should use foods such as lean protein whole grains, low-fat dairy fruits and avoid high-sodium foods such as Deli meats, Pickles, Canned soups, and etc.");
-        } else if ((145 < heart < 159) && (90 < breath < 99)) {
-            return (" have prehypertension stage one which first stage of hypertesion. You should consult your doctor, and follow regular excercising plans and seriously avoid hight sodium foods.");
-        } else if ((160 < heart < 180) && (100 < breath < 110)) {
-            return ("having prehypertension stage two that is second stage hypertesion, you should urgently consult your doctor and get medication. You require more excercises and stickly avoid sugur, coffee and all foods that are high in sodium such as canned chicken soups, pickles and etc");
-        } else if ((179 < heart < 200) && (109 < breath < 170)) {
-            return ("having hypertension Crisis, you should consult a doctor as an emergency case");
+        } else if ((140 < heart && heart < 180) && (34 < breath && breath < 45)) {
+            return ("The Respiration rate and heart rate is higher than normal, it is very likely that an lung infection is in progress, please consult your doctor before it becomes severe");
+        } else if ((180 < heart && heart < 219) && (44 < breath && breath < 55)) {
+            return ("The heart rate and respiration rate is very too high, you should consult your doctor as an emergency case");
 
-        }
+        } else { "The respiration rate and heart rate is not in valid range, please follow the instructions and try again or consult the doctor" }
 
 
     };

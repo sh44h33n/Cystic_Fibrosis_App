@@ -25,55 +25,13 @@
         <form>
             <h1>Nutrition Control</h1>
             <h3>Cystic Fibrosis</h3>
-            <h4></h4>
+            <h4>Cystic fibrosis (CF) has long been associated with malnutrition. However, due to early diagnosis, nutritional supplements, and increased prevalence of obesity in the general population, overweight, and obesity in the CF patient population
+                is becoming a concern. Nutrition Controller address the adverse outcomes of overweight and obesity by advising on balancing diet.</h4><br>
 
 
 
 
 
-            <div ng-init="showDefs=flase" class="panel panel-default">
-
-                <div class="panel-heading">
-                    <a href="" ng-show="!showDefs" ng-click="showDefs=!showDefs">+</a>
-                    <a href="" ng-show="showDefs" ng-click="showDefs=!showDefs">-</a>
-                    <a href="" ng-click="showDefs=!showDefs">How to check heart rate</a>
-                </div>
-
-                <div ng-show="showDefs" class="panel-body">
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div class="thumbnail">
-                                <img src="./src/images/count/pulse.jpg" alt="Lights" style="width:100%">
-                                <div class="caption">
-                                    <p>Touch the pulse point as above</p>
-                                </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="thumbnail">
-                                <img src="./src/images/count/count.jpg" alt="Nature" style="width:100%">
-                                <div class="caption">
-                                    <p>Count the pulse for one minute</p>
-                                </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <div class="thumbnail">
-                                <img src="./src/images/count/bbreath.jpg" alt="Lights" style="width:100%">
-                                <div class="caption">
-                                    <p>You can count baby pulse as above</p>
-                                </div>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                </div>
-            </div>
 
 
 
@@ -111,8 +69,8 @@
             </div>
             <div class="panel-body">
 
-                <h3><span class="" ng-show="weight && height">Based on your weight, {{ weight }} pounds, and height {{ height }} inches, your BODY MASS INDEX (BMI) is: <span class="result">{{ calcBMI() | number:2 }}</span>, which is considered as
-                    <span class="advice"> {{ BMIhealth() }} </span></h3>
+                <h4><span class="" ng-show="weight && height">Based on your weight, {{ weight }} pounds, and height {{ height }} inches, your BODY MASS INDEX (BMI) is: <span class="result">{{ calcBMI() | number:2 }}</span>, which is considered as
+                    <span class="advice"> {{ BMIhealth() }} </span></h4>
 
             </div>
         </div>

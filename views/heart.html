@@ -3,7 +3,119 @@
     <form>
         <h1>Heart Rate & Respiration Analysis</h1>
         <h2>Cystic Fibrosis
+
+            <h2 class="">Heart and Breathing Rates</h2>
+            <p>
+                <h3 class="text-justify">Your heart rate, or pulse, is the number of times your heart beats in a minute. Normal resting pulse ranges from 60 to 80 beats per minute. Your breathing rate is measured in a similar manner, with an average resting rate of 12 to 20 breaths
+                    per minute. Both your pulse and breathing rate increase with exercise, maintaining a ratio of approximately 1 breath for every 4 heartbeats. This means analysing either heart rate or respiration would be sufficient to provide the intended
+                    metabolic state report. Medical research suggests that respiration rate is the marker of pulmonary dysfunction. The cystic fibrosis patients' respiration rate is usually over 30 breaths/min and increases as the mucus acumulates in
+                    the lung. Therefore, respiration rate analysis can help in the early identification lung infection</h3>
+            </p>
+
         </h2>
+
+
+        <div ng-init="showPulse=flase" class="panel panel-default">
+
+            <div class="panel-heading">
+                <a href="" ng-show="!showPulse" ng-click="showPulse=!showPulse">+</a>
+                <a href="" ng-show="showPulse" ng-click="showPulse=!showPulse">-</a>
+                <a href="" ng-click="showPulse=!showPulse">How to check heart rate</a>
+            </div>
+
+            <div ng-show="showPulse" class="panel-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="thumbnail">
+                            <img src="./src/images/count/pulse.jpg" alt="Lights" style="width:100%">
+                            <div class="caption">
+                                <p>Touch the pulse point as above</p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="thumbnail">
+                            <img src="./src/images/count/count.jpg" alt="Nature" style="width:100%">
+                            <div class="caption">
+                                <p>Count the pulse for one minute</p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="thumbnail">
+                            <img src="./src/images/count/bbreath.jpg" alt="Lights" style="width:100%">
+                            <div class="caption">
+                                <p>You can count baby pulse as above</p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div ng-init="showResp=flase" class="panel panel-default">
+
+            <div class="panel-heading">
+                <a href="" ng-show="!showResp" ng-click="showResp=!showResp">+</a>
+                <a href="" ng-show="showResp" ng-click="showResp=!showResp">-</a>
+                <a href="" ng-click="showResp=!showResp">How to check the respiration rate?</a>
+            </div>
+
+            <div ng-show="showResp" class="panel-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="thumbnail">
+                            <img src="./src/images/count/breath.jpg" alt="Lights" style="width:100%">
+                            <div class="caption">
+                                <p>Relax and deep breath </p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="thumbnail">
+                            <img src="./src/images/count/count.jpg" alt="Nature" style="width:100%">
+                            <div class="caption">
+                                <p>Count the breath for one minute</p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="thumbnail">
+                            <img src="./src/images/count/bbreath.jpg" alt="Lights" style="width:100%">
+                            <div class="caption">
+                                <p>You can count baby breath as above</p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
         <div class="form-group">
 
             <label class="control-label">Heart Rate:</label>
@@ -30,8 +142,8 @@
         </div>
         <div class="panel-body">
 
-            <h3><span class="" ng-show="heartrate && breathrate">Based on the provided, {{ heartrate }} rate, and {{ breathrate }} rate, <span class="result"></span>
-                <span class="advice"> {{ respResult() }} </span></h3>
+            <h3><span class="" ng-show="heartrate && breathrate">Provided Heart rate and Respiration rate: {{ heartrate }} pulse per minutee, and {{ breathrate }} breathes per minute.<br> <span class="result"></span>
+                <span class="advice">Respiration & Heart rate Analysis: {{ respResult() }}. </span></h3>
 
         </div>
     </div>
