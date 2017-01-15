@@ -1,0 +1,99 @@
+<body>
+    <div class="container">
+
+        <div class="well">
+            <h3>Know your foods</h3>
+            <p>Keep accurate information about protiens and fats in foods you eat everyday</p>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div>
+
+
+            <!-- first clolunm of foods-->
+
+            <a href="#dietlog/{{fruit.id}}/edit" ng-repeat="fruit in slides" data-toggle="tooltip" data-placement="top" title="Click to edit" ng-click="SetValue({{slide.id}})">
+
+
+                <div class="col-lg-3">
+
+
+                    <br>
+                    <h3>{{fruit.title}}</h3>
+                    <img class="img-responsive" ng-src="{{IMAGE_LOCATION+fruit.image}}" style="max-height:150px">
+
+
+                    <p>
+
+
+                        Description : {{fruit.desc}}.<br>
+                        <h4>Nutrition facts of 100 grams of <br>{{fruit.title}} ...</h4> Protein : {{fruit.protien}}<br> Energy : {{fruit.energy}}<br> Fats : {{fruit.fats}}
+
+
+
+                    </p>
+                </div>
+
+
+            </a>
+
+
+
+            <div class="col-lg-3">
+                <a href="#" data-toggle="tooltip" data-placement="top" title="Click to add new fruit">
+
+
+
+                    <br>
+
+                    <p>
+                        <h3>Add a new fruits ..</h3>
+                        <img class="img-responsive" ng-src="./src/images/foods/add.png " style="max-height: 145px">
+
+
+
+
+
+                    </p>
+            </div>
+
+
+
+
+            </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+    </div>
+
+
+    </div>
+
+</body>

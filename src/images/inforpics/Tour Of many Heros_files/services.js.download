@@ -1,0 +1,79 @@
+var app = angular.module('tourOfHeros');
+
+app.factory('DataSource', ['$http', function($http) {
+    return {
+        get: function(fileName, callback) {
+            $http.get(fileName).
+            success(function(data, status) {
+                callback(data);
+                return data;
+            });
+        }
+    };
+}]);
+
+
+
+
+app.service('heroService', function setValue($filter, DataSource, data) {
+    var fdata = new Array();
+
+    // Retrieving and creating image array using json files
+
+    DataSource.get("./src/JsonImageFiles/foods.json", function(data) {
+        fdata = data;
+
+        setValue(data);
+
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+    heroes = [{
+            id: 1,
+            name: "Shaheen"
+        },
+        {
+            id: 2,
+            name: "Aishath Eira Shaheen"
+        },
+        {
+            id: 3,
+            name: "Midhuhath"
+        },
+        {
+            id: 4,
+            name: "Shaheen Mohamed"
+        }
+    ];
+
+    return {
+        getTopHeroes: function set() {
+            return heroes;
+        },
+
+        getHero: function(id) {
+            id = parseInt(id);
+            var hero = $filter('filter')(heroes, { id: id }, true);
+
+            if (hero.length) {
+                return hero[0];
+            } else {
+                return {};
+            }
+        },
+
+        getAllHeroes: function() {
+            return heroes;
+        }
+    }
+});

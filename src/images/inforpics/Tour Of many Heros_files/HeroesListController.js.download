@@ -1,0 +1,50 @@
+
+
+
+var app = angular.module('CysticFibrosis');
+app.controller('HeroListController', ['$scope','dietService',  function($filter) {
+
+
+ var heroes = [{
+            id: 1,
+            name: "Shaheen"
+        },
+        {
+            id: 2,
+            name: "Aishath Eira Shaheen"
+        },
+        {
+            id: 3,
+            name: "Midhuhath"
+        },
+        {
+            id: 4,
+            name: "Shaheen Mohamed"
+        }
+    ];
+
+    return {
+        getTopHeroes: function() {
+            return heroes;
+        },
+
+        getHero: function(id) {
+            id = parseInt(id);
+            var hero = $filter('filter')(heroes, { id: id }, true);
+
+            if (hero.length) {
+                return hero[0];
+            } else {
+                return {};
+            }
+        },
+        
+        getAllHeroes: function() {
+            return heroes;
+        }
+    }
+
+
+
+    
+}]);

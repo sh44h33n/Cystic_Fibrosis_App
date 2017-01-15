@@ -1,0 +1,49 @@
+<div class="container">
+    <div ng-controller="editController">
+
+
+        <div>
+
+
+
+            <h1>Nurition details of {{title}}</h1>
+
+
+            <br>
+
+
+
+
+
+            <div class="col-lg-5">
+
+                <img class="img-responsive" ng-src="{{IMAGE_LOCATION+image}}" style="max-height:800px">
+                <br>
+
+            </div>
+            <div class="col-lg-7>" <div class="form-group">
+                <div class="col-xs-7">
+                    <label class="control-label">Food Name</label>
+                    <input type="text" ng-model="title" class="form-control" id="text"><br>
+                    <label class="control-label">Food Description</label>
+                    <input type="text" ng-model="desc" class="form-control" id="text"><br>
+                    <label class="control-label">Protien in 100 grams</label>
+                    <input type="text" ng-model="prot" class="form-control" id="text"><br>
+                    <label class="control-label">Fats in 100 grams</label>
+                    <input type="text" ng-model="fat" class="form-control" id="text"><br>
+                    <label class="control-label">Energy (KJ) in 100 grams</label>
+                    <input type="text" ng-model="ener" class="form-control" id="text"><br>
+                    <button type="button" class="btn btn-default" ng-click="updateDetails(id,title,desc,prot,fat,ener)">Save details</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+</div>

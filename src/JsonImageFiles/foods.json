@@ -1,0 +1,80 @@
+[{
+
+        "title": "Green Apples",
+        "id": "1",
+        "desc": "Tropical fruit ",
+        "protien": "0.3 gram protien in 100 grams",
+        "fats": "0.2 gram fats in 100 grams",
+        "energy": "229KJ energy in 100 grams",
+        "image": "apple.jpg"
+    },
+    {
+
+        "title": "Boiled Eggs",
+        "id": "2",
+        "desc": "Rich in protein and fats",
+        "protien": "1.2 gram protien in 100 grams",
+        "fats": "0.2 gram fats in 100 grams",
+        "energy": "363KJ energy in 100 grams",
+        "image": "egg.jpg"
+    },
+    {
+
+        "title": "Bananas",
+        "id": "3",
+        "desc": "Rich in protein and fats",
+        "protien": "1.2 gram protien in 100 grams",
+        "fats": "0.2 gram fats in 100 grams",
+        "energy": "363KJ energy in 100 grams",
+        "image": "banana.jpg"
+    },
+    {
+
+        "title": "Oranges",
+        "id": "4",
+        "desc": "Tropical Fruit",
+        "protien": "0.7 gram protien in 100 grams",
+        "fats": "0.3 gram fats in 100 grams",
+        "energy": "209KJ energy in 100 grams",
+        "image": "orange.jpg"
+    },
+    {
+
+        "title": "Bread",
+        "id": "5",
+        "desc": "Tropical fruit ",
+        "protien": "0.3 gram protien in 100 grams",
+        "fats": "0.2 gram fats in 100 grams",
+        "energy": "229KJ energy in 100 grams",
+        "image": "bread.jpg"
+    },
+    {
+
+        "title": "Carrot",
+        "id": "7",
+        "desc": "Tropical Fruit",
+        "protien": "0.7 gram protien in 100 grams",
+        "fats": "0.3 gram fats in 100 grams",
+        "energy": "209KJ energy in 100 grams",
+        "image": "carrot.jpg"
+    },
+    {
+        "title": "Tomato",
+        "id": "8",
+        "desc": "Tropical Fruit",
+        "protien": "0.7 gram protien in 100 grams",
+        "fats": "0.3 gram fats in 100 grams",
+        "energy": "209KJ energy in 100 grams",
+        "image": "tomato.jpg"
+    },
+    {
+
+        "title": "Cabbage",
+        "id": "9",
+        "desc": "Tropical Fruit",
+        "protien": "0.7 gram protien in 100 grams",
+        "fats": "0.3 gram fats in 100 grams",
+        "energy": "209KJ energy in 100 grams",
+        "image": "cabbage.jpg"
+    }
+]

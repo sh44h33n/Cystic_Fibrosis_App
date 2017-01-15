@@ -68,6 +68,19 @@ app.config(function($routeProvider) {
 
 
         })
+        .when('/dietlog', {
+            templateUrl: './views/dietlog.html',
+            controller: 'dietController'
+
+
+        })
+        .when('/dietlog/:slide/edit', {
+            templateUrl: './views/edit.html',
+            controller: 'editController'
+
+
+        })
+
 
     .otherwise('/home');
 
@@ -103,3 +116,29 @@ app.controller('ImageSlider', function($scope, DataSource) {
 
 
 });
+
+
+
+
+app.directive('tooltip', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            $(element).hover(function() {
+                // on mouseenter
+                $(element).tooltip('show');
+            }, function() {
+                // on mouseleave
+                $(element).tooltip('hide');
+            });
+        }
+    };
+});
+
+function setValue($scope, data) {
+    sharedProperties.setProperty($scope.data);
+}
+
+function getValue($scope, sharedProperties) {
+    $scope.data = sharedProperties.getProperty();
+}
