@@ -18,13 +18,15 @@ app.controller('bloodController', ['$scope', function($scope) {
 
 
 
-        if ((systo < 69 || systo > 200)) {
+        if ((systo < 69 || systo > 190)) {
             return ("The blood pressure provided is in invalid range , please follow the instructions and try again or consult your doctor");
 
-        } else if ((diasto < 39 || diasto > 170)) {
+        } else if ((50 > diasto || diasto > 120)) {
             return ("The blood pressure provided is in invalid range , please follow the instructions and try again or consult your doctor");
+        } else if ((60 < systo && systo < 80) && (50 < diasto && diasto < 60)) {
+            return ("You have low blood pressure, try to include more protien and high energy food in your diet and any doctor prescribed madication.");
 
-        } else if ((69 < systo && systo < 120) && (39 < diasto && diasto < 80)) {
+        } else if ((80 < systo && systo < 120) && (60 < diasto && diasto < 80)) {
             return ("You have normal blood pressure, continue your current diet and any doctor prescribed madication.");
 
         } else if ((120 < systo && systo < 139) && (80 < diasto && diasto < 89)) {

@@ -12,6 +12,8 @@ app.controller('dietController', function($scope, DataSource) {
     DataSource.get("./src/JsonImageFiles/foods.json", function(fooddata) {
         $scope.slides = fooddata;
 
+
+
     });
 
 

@@ -80,6 +80,12 @@ app.config(function($routeProvider) {
 
 
         })
+        .when('/add', {
+            templateUrl: './views/add.html',
+            controller: 'addController'
+
+
+        })
 
 
     .otherwise('/home');
