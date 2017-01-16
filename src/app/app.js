@@ -11,7 +11,7 @@ app.factory('DataSource', ['$http', function($http) {
     };
 }]);
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider) { //loading views 
     $routeProvider
         .when('/', {
             templateUrl: './views/home.html'
@@ -93,19 +93,6 @@ app.config(function($routeProvider) {
 
 });
 
-app.controller('MainCtrl', function($scope) {
-    $scope.name = 'World';
-});
-
-app.controller('DropdownCtrl', function($scope) {
-
-    $scope.items = [
-        "The first choice!",
-        "And another choice for you.",
-        "but wait! A third!"
-    ];
-});
-
 
 app.controller('ImageSlider', function($scope, DataSource) {
     $scope.myInterval = 2000;
@@ -140,11 +127,3 @@ app.directive('tooltip', function() {
         }
     };
 });
-
-function setValue($scope, data) {
-    sharedProperties.setProperty($scope.data);
-}
-
-function getValue($scope, sharedProperties) {
-    $scope.data = sharedProperties.getProperty();
-}

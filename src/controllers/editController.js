@@ -1,6 +1,6 @@
 var app = angular.module('CysticFibrosis');
-app.controller('editController', function($scope, DataSource, $routeParams) {
-    var ctrl = this;
+app.controller('editController', function($scope, appService, DataSource, $routeParams) {
+    var ctrl = this; // controller for showing individual foods
     //this controlls adding removing foods to dietlog
 
 
@@ -33,6 +33,30 @@ app.controller('editController', function($scope, DataSource, $routeParams) {
             }
 
         }
+        if (foodId > 9) {
+            var newf = appService.getnewFoods();
+            for (var i = 0; i < newf.length; i++) {
+                if (foodData[i].id == foodId) {
+
+                    $scope.title = newf[i].title;
+                    $scope.id = newf[i].id;
+                    $scope.desc = newf[i].desc;
+                    $scope.image = newf[i].image;
+                    $scope.prot = newf[i].protien;
+                    $scope.fat = newf[i].fats;
+                    $scope.ener = newf[i].energy;
+                    //alert($scope.title);
+
+                }
+
+
+
+
+
+            }
+        }
+
+
 
 
         scope.updateDetails = function(id, title, desc, prot, fat, ener) {

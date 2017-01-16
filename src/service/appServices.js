@@ -1,44 +1,41 @@
 ﻿var app = angular.module('CysticFibrosis');
+//application services availablw to all the controllers
 
-app.factory('DataSource', ['$http', function($http) {
+
+app.service('appService', function() {
+    var foodData = new Array();
+
+
+    //food array for adding to food page from services...
+
+
+    var foodData = [{
+
+            "title": "Watermelon",
+            "id": "10",
+            "desc": "Healthy fruit",
+            "protien": "0.6 gram protien",
+            "fats": "0.9 gram fats",
+            "energy": "658KJ energy",
+            "image": "melon.jpg"
+        },
+        {
+
+            "title": "Mango",
+            "id": "11",
+            "desc": "Healthy fruit",
+            "protien": "0.9 gram protien",
+            "fats": "1.9 gram fats",
+            "energy": "958KJ energy",
+            "image": "mango.jpg"
+        }
+    ]
+
     return {
-        get: function(fileName, callback) {
-            $http.get(fileName).
-            success(function(data, status) {
-                callback(data);
-            });
-        }
-    };
+        getnewFoods: function() {
+            return foodData; //return food array
+        },
 
 
-
-
-
-
-    // Retrieving and creating image array using json files
-    DataSource.get("./src/JsonImageFiles/foods.json", function(data) {
-        var foodData = data;
-        var location = "./src/images/foods/";
-
-
-
-
-        return {
-            getfoods: function() {
-                return foodData;
-            },
-            getLoc: function() {
-                return location;
-            }
-        }
-
-
-
-    });
-
-
-
-
-
-
-}]);
+    }
+});

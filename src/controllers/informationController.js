@@ -1,5 +1,10 @@
-angular.module('CysticFibrosis').controller('informationController', ['$scope', function($scope) {
+var app = angular.module('CysticFibrosis');
+app.controller('informationController', function($scope, DataSource) {
     var ctrl = this;
+    //controlling information  in the infor page
+
+
+
 
     $scope.defs = ['Cystic fibrosis is a disease that changes how your body makes mucus and sweat. It affects how well your lungs, digestive system, and some other body parts work. It’s caused by a flawed gene. If you have cystic fibrosis, you may have mucus that’s too thick or sweat that’s too salty. If heavy mucus clogs your lungs, it’s hard to breathe. It can also block your pancreas, an organ in your belly, so you can’t digest your food as well. The disease may make you sweat away too much of the salt your body needs to work well. Most people diagnosed with cystic fibrosis today are babies, thanks to newborn screening programs. More than 75% of children with cystic fibrosis get a diagnosis by age 2. In some cases, people don’t find out they have cystic fibrosis until they’re teens or adults. Parents can also test their babies for cystic fibrosis before they’re born. Cystic fibrosis is a serious disease that can be life-threatening. But it’s different for everyone. Symptoms are mild for some people and severe for others. The good news is that most people with cystic fibrosis now live twice as long as they did 30 years ago. Today, some people are living into their 40s, 50s, or longer. The key is to get treatment as early as possible. Right now, there are many ways to ease symptoms and help you manage the condition.'];
 
@@ -23,4 +28,4 @@ angular.module('CysticFibrosis').controller('informationController', ['$scope', 
 
 
 
-}]);
+});

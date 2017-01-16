@@ -3,7 +3,7 @@ var app = angular.module('CysticFibrosis');
 app.controller('bloodController', ['$scope', function($scope) {
     var ctrl2 = this;
 
-
+    //controlling the analysing blood pressure 
 
 
 
@@ -16,7 +16,7 @@ app.controller('bloodController', ['$scope', function($scope) {
         var systo = $scope.systolic;
         var diasto = $scope.diastolic;
 
-
+        // Array for comparing bplood pressureSS
 
         if ((systo < 69 || systo > 190)) {
             return ("The blood pressure provided is in invalid range , please follow the instructions and try again or consult your doctor");
